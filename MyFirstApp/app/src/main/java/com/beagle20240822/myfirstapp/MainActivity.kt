@@ -2,6 +2,7 @@ package com.beagle20240822.myfirstapp
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun click(view: View){
-        println("Button was clicked!!!")
+    fun raffle(view: View){
+        val textResult = findViewById<TextView>(R.id.text_result)
+        val num = java.util.Random().nextInt(11) // Generate a random number between 0...10
+        textResult.text = "$num"
     }
 }
